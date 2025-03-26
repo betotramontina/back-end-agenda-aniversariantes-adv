@@ -134,3 +134,26 @@ def del_contato(query: ContatoBuscaSchema):
         logger.warning(f"Erro ao deletar contato #'{contato_nome}', {error_msg}")
         return {"message": error_msg}, 404
 
+@app.put('/contato', tags=[contato_tag],
+         responses={"200": ContatoViewSchema, "404": ErrorSchema, "400": ErrorSchema})
+def update_contato(query: ContatoBuscaSchema, form: ContatoSchema):
+    contato_nome = unquote(unquote(query.nome))
+    logger.debug(f"Atualizando dados do contato #{contato_nome}")
+    session = Session()
+    contato = session.query(Contato).filter(Contato.nome == contato_nome).first()
+
+    if not contato:
+        error_msg = "Contato não encontrado :/"
+        logger.warning(f"Erro ao atualizar contato '{contato_nome}', {error_msg}")
+        return {"message": error_msg}, 404
+
+    if form.nome:
+        contato.nome = form.nome
+    if form.celular:
+        contato.celular = form.celular
+    if form.data_nascimento:
+        contato.data_nascimento = form.data_nascimento
+
+    session.commit()
+    logger.debug(f"Contato atualizado: '{contato.nome}'")
+    return apresenta_contato(contato), 200
