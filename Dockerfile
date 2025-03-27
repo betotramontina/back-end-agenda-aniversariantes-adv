@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar todos os arquivos do projeto para o contêiner
 COPY . .
 
-# Expor a porta que o Flask irá rodar (ajuste conforme necessário)
-EXPOSE 5000
-
 # Comando para iniciar o servidor Flask
-CMD ["flask", "run", "--host=0.0.0.0", "--port", "5000"]
+CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5000"]
