@@ -137,6 +137,10 @@ def del_contato(query: ContatoBuscaSchema):
 @app.put('/contato', tags=[contato_tag],
          responses={"200": ContatoViewSchema, "404": ErrorSchema, "400": ErrorSchema})
 def update_contato(query: ContatoBuscaSchema, form: ContatoSchema):
+    """Edita as informações de um contato.
+
+    Retorna uma mensagem de confirmação da edição.
+    """
     contato_nome = unquote(unquote(query.nome))
     logger.debug(f"Atualizando dados do contato #{contato_nome}")
     session = Session()
