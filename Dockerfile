@@ -1,5 +1,5 @@
 # Etapa 1: Imagem base
-FROM python:3.9-slim
+FROM python:3.9
 
 # Diretório de trabalho dentro do contêiner
 WORKDIR /app
