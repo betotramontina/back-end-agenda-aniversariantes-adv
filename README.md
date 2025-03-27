@@ -21,3 +21,8 @@
 ##### Interagir com as rotas da API via Swagger
 
 # Como executar - Via Docker
+#### Executar docker build -t nome-da-imagem .
+#### Executar docker run -p 5000:5000 nome-da-imagem
+#### pip install -r requirements.txt
+#### flask run
+#### http://localhost:5000
