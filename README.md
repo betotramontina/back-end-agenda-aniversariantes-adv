@@ -7,7 +7,7 @@
 ### Essa é uma alternativa para você, que assim como eu, não tem Facebook, Instagram ou qualquer outra mídia social e por isso perdeu a sua agenda de aniversários. 
 ### Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.  
 
-# Instruções de uso - Modo Desenvolvimento
+# Como executar - Modo Desenvolvimento
 #### Instalar Python
 #### Instalar Visual Studio Code (ou outra ferramenta conveniente)
 #### Utilizar terminal Linux
@@ -20,4 +20,4 @@
 ##### Acessar API por meio do endereço http://172.20.51.164:5000/ 
 ##### Interagir com as rotas da API via Swagger
 
-# Instruções de uso - Via Docker
+# Como executar - Via Docker
