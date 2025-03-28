@@ -21,6 +21,7 @@
 ##### Interagir com as rotas da API via Swagger
 
 # Como executar - Via Docker
-#### Abrir o terminal na raiz do seu projeto, onde o Dockerfile está localizado, e executar o seguinte comando como administrador: 'docker build -t nome-da-imagem .'
+#### Abrir VS Code e clonar o seguinte repositório: https://github.com/betotramontina/back-end-agenda-aniversariantes-adv.git
+#### Abrir o terminal na raiz do projeto, onde o Dockerfile está localizado, e executar o seguinte comando como administrador: 'docker build -t nome-da-imagem .'
 #### Em seguida, executar o seguinte comando como adm: 'docker run -p 5000:5000 nome-da-imagem'
 #### Para interagir com a API, abrir o navegador e acessar: http://localhost:5000
